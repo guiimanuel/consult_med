@@ -1,5 +1,5 @@
 {
-  "name": "consult_med",
+  "name": "hospital_med",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.2.1",
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.3"
+    "express-handlebars": "^8.0.3",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }

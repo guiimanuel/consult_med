@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Sangue - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Informações do Banco de Sangue - HOSPITAL_MED</h1>
+
+    <form action="/bancosSangue/{{bancoSangue.id_sangue}}" method="post">
+        <label for="tipo_sangue">Tipo do Sangue</label>
+        <input type="text" name="tipo_sangue" value="{{bancoSangue.tipo_sangue}}"required>
+        <label for="quantidade">Quantidade Armazenada</label>
+        <input type="number" name="quantidade" value="{{bancoSangue.quantidade}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

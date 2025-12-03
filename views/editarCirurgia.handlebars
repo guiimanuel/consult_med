@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirurgia - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Informações da Cirurgia - HOSPITAL_MED</h1>
+
+    <form action="/medicos/{{cirurgia.id_cirurgia}}" method="post">
+        <label for="nome">Nome do Paciente</label>
+        <input type="text" name="nome" value="{{cirurgia.nome_paciente}}"required>
+        <label for="tipo_cirurgia">Tipo da Cirurgia</label>
+        <input type="text" name="tipo_cirurgia" value="{{cirurgia.tipo_cirurgia}}" required>
+        <label for="data_cirurgia">Data da Cirurgia</label>
+        <input type="text" name="data_cirurgia" value="{{cirurgia.data_cirurgia}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

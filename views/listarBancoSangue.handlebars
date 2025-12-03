@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Sangue - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Listar Bancos de Sangue- HOSPITAL_MED</h1>
+    
+    <ul>
+        {{#each bancosSangue}}
+            <li>
+                <a href="/bancosSangue/{{id_bancoSangue}}">{{tipo_sangue}}</a>
+                <a href="/bancosSangue/{{id_bancoSangue}}/editar">Editar</a>
+
+                <form action="/bancosSangue/{{id_bancoSangue}}/excluir" method="post" style="display: inline;">
+                    <button type="submit" onclick="return confirm('Confirmar exclusão?')">
+                        Excluir
+                    </button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

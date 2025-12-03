@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internamento - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Informações do Internamento - HOSPITAL_MED</h1>
+
+    <form action="/medicos/{{internamento.id_internamento}}" method="post">
+        <label for="nome">Nome do Paciente</label>
+        <input type="text" name="nome" value="{{internamento.nome_paciente}}"required>
+        <label for="quarto">Quarto</label>
+        <input type="number" name="quarto" value="{{internamento.quarto}}" required>
+        <label for="data_entrada">data_entrada</label>
+        <input type="text" name="data_entrada" value="{{internamento.data_entrada}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Listar Agendamentos - HOSPITAL_MED</h1>
+    
+    <ul>
+        {{#each agendamentos}}
+            <li>
+                <a href="/agendamentos/{{id_agendamento}}">{{nome_paciente}}</a>
+                <a href="/agendamentos/{{id_agendamento}}/editar">Editar</a>
+
+                <form action="/agendamentos/{{id_agendamento}}/excluir" method="post" style="display: inline;">
+                    <button type="submit" onclick="return confirm('Confirmar exclusão?')">
+                        Excluir
+                    </button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

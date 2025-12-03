@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médico - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Informações do Médico - HOSPITAL_MED</h1>
+
+    <form action="/medicos/{{medico.id_medico}}" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" value="{{medico.nome}}"required>
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" value="{{medico.idade}}" required>
+        <label for="especializacao">Especialização</label>
+        <input type="text" name="especializacao" value="{{medico.especializacao}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

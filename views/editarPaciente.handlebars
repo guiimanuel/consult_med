@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Informações de Paciente - HOSPITAL_MED</h1>
+
+    <form action="/pacientes/{{paciente.id_paciente}}" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" value="{{paciente.nome}}"required>
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" value="{{paciente.idade}}" required>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" value="{{paciente.cpf}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

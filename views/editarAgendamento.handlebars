@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Editar Agendamento de Consultas - HOSPITAL_MED</h1>
+
+    <form action="/agendamentos/{{agendamento.id_agendamento}}" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" value="{{agendamento.nome_paciente}}"required>
+        <label for="hora_inicio">Horário da Consulta</label>
+        <input type="number" name="hora_inicio" value="{{agendamento.hora_inicio}}" required>
+        <label for="especializacao">Especialização</label>
+        <input type="text" name="especializacao" value="{{agendamento.especializacao}}" required>
+        <button type="submit">Salvar</button>
+
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

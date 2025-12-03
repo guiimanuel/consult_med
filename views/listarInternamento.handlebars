@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internamento - HOSPITAL_MED</title>
+</head>
+<body>
+    <h1>Listar Internamentos - HOSPITAL_MED</h1>
+    
+    <ul>
+        {{#each internamentos}}
+            <li>
+                <a href="/internamentos/{{id_internamento}}">{{nome_paciente}}</a>
+                <a href="/internamentos/{{id_internamento}}/editar">Editar</a>
+
+                <form action="/internamentos/{{id_internamento}}/excluir" method="post" style="display: inline;">
+                    <button type="submit" onclick="return confirm('Confirmar exclusão?')">
+                        Excluir
+                    </button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>
